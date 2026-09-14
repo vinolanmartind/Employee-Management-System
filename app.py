@@ -8,7 +8,7 @@ app=Flask(__name__)
 db = mysql.connector.connect(
     host="localhost",
     user="martin",
-    password="vinolan3302j",
+    password="",
     database="employeemanagement_System"
 )
 
