@@ -1,0 +1,125 @@
+* {
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.title_div{
+text-align: left;
+font-size: 35px ;
+font-weight: 500;
+}
+.success-message {
+background-color: #d4edda;
+color: #155724;
+padding: 12px;
+margin-bottom: 15px;
+border-radius: 5px;
+text-align: center;
+}
+
+.maindiv {
+width: 100%;
+max-width: 1100px;
+margin: 30px auto;
+padding: 50px;
+background: #ffffff;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.page-title {
+    margin-bottom: 25px;
+}
+
+.page-title h2 {
+font-size: 26px;
+font-weight: 600;
+color: #333;
+}
+
+
+
+
+.form-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 25px;
+row-gap: 20px;
+width: 100%;
+}
+
+.entrypage {
+display: flex;
+flex-direction: column;
+}
+
+.entrypage label {
+margin-bottom: 7px;
+font-size: 14px;
+font-weight: 600;
+color: #444;
+}
+
+.entrypage input,
+.entrypage select {
+width: 100%;
+height: 42px;
+padding: 0 12px;
+border: 1px solid #cfcfcf;
+border-radius: 6px;
+background: #fff;
+font-size: 14px;
+outline: none;
+}
+
+.entrypage input:focus,
+.entrypage select:focus {
+border-color: #5c5c5c;
+}
+
+
+.button-area {
+display: flex;
+justify-content: flex-end;
+gap: 12px;
+margin-top: 30px;
+}
+
+.button-area button {
+min-width: 100px;
+height: 40px;
+padding: 0 20px;
+border: none;
+border-radius: 6px;
+background: #5c5c5c;
+color: white;
+font-size: 14px;
+cursor: pointer;
+}
+
+.button-area button:hover {
+ background: #444;
+}
+
+
+
+@media (max-width: 800px) {
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .maindiv {
+        width: 95%;
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,99 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #5c5c5c;
+}
+
+.login-card {
+width: 380px;
+height: 450px;
+padding: 35px;
+background: white;
+border: 1px solid #d5dce3;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+color: #333;
+}
+
+.logo-section {
+text-align: center;
+margin-bottom: 28px;
+}
+
+.logo-section h2 {
+font-size: 28px;
+font-weight: 600;
+color: #5c5c5c;
+margin-bottom: 6px;
+}
+.logo-section p {
+color: #6b7280;
+font-size: 14px;
+}
+
+.input-group {
+ margin-bottom: 28px;
+}
+
+.input-group label {
+display: block;
+margin-bottom: 17px;
+font-size: 17px;
+font-weight: 700;
+color: #5c5c5c;
+}
+
+.input-group input {
+width: 100%;
+height: 41px;
+border: 1px solid #838383;
+outline: none;
+border-radius: 6px;
+padding: 0 12px;
+background: #fff;
+color: #333;
+font-size: 14px;
+transition: 0.2s;
+}
+
+.input-group input::placeholder {
+ color: #5c5c5c;
+}
+
+.input-group input:focus {
+border-color:#5c5c5c;
+box-shadow:#727272;
+}
+
+.login-btn {
+width: 100%;
+height: 45px;
+border: none;
+border-radius: 6px;
+background:#5c5c5c;
+color: white;
+font-size: 15px;
+font-weight: 500;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.login-btn:hover {
+    background:#727272;
+}
+
+.error-msg {
+color: #dc2626;
+text-align: center;
+margin-bottom: 15px;
+font-size: 13px;
+}

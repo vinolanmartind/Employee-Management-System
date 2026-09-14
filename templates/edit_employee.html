@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Employee
+{% endblock title %}
+{% block extra_css %}
+<link rel="stylesheet"  href="{{ url_for('static', filename='css/edit.css') }}"> 
+{% endblock %}
+
+{% block content %}
+
+<div class="edit-employee-container">
+
+    <h1>Edit Employee</h1>
+    {% if success %}
+    <div class="success-message">
+        {{ success }}
+    </div>
+      {% endif %}
+
+    <form action="" method="POST">
+
+
+        <div class="form-group">
+            <label for="Id">Employee ID</label>
+            <input type="text" id="Id" name="Id" value="{{ employee.Id }}" readonly>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="Emp_FirstName">First Name</label>
+            <input type="text" id="Emp_FirstName" name="Emp_FirstName" value="{{ employee.Emp_FirstName }}" required>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="Emp_LastName">Last Name</label>
+            <input type="text" id="Emp_LastName" name="Emp_LastName" value="{{ employee.Emp_LastName }}" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="DateOFBirth">Date Of Birth</label>
+            <input type="date" id="DateOFBirth" name="DateOFBirth" value="{{ employee.DateOFBirth }}" required>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="Department">Department</label>
+
+            <select id="Department" name="Department" required>
+
+                <option value="">-- Select Department --</option>
+
+                {% for department in departments %}
+
+                <option value="{{ department.Dep_Name }}" {% if department.Dep_Name==employee.Department %} selected {%
+                    endif %}>
+                    {{ department.Dep_Name }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Role">Role</label>
+            <input type="text" id="Role" name="Role" value="{{ employee.Role }}" required>
+        </div>
+
+       
+        <div class="form-buttons">
+            
+            
+            <button type="submit" >
+                Update Employee
+            </button>
+
+            <a href="{{ url_for('employee_view', id=employee.Id) }}">
+                Cancel
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock content %}

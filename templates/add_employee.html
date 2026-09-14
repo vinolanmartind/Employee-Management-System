@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %} 
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"  href="{{ url_for('static', filename='css/entry.css') }}"> 
+{% endblock %}
+
+{% block content %}
+<div class="maindiv">
+<form method="post" action="/employee_add">
+    <div class="title_div">
+        <span>Add Employee Details</span>
+    </div>
+       {% if success %}
+    <div class="success-message">
+        {{ success }}
+    </div>
+      {% endif %}
+     <div class="form-grid">
+     
+
+
+    <div class="entrypage">
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName" name="FirstName" required />
+    </div>
+    <div class="entrypage">
+        <label for="LastName">Last Name</label>
+        <input type="text" id="LastName" name="LastName" required />
+    </div>
+    <div class="entrypage">
+        <label for="DOB">Date Of Birth</label>
+        <input type="date" id="DOB" name="DOB" required />
+    </div>
+    <div class="entrypage">
+        <label for="Department">Department</label>
+        <select id="Department" name="Department" required >
+            <option value="">-- Select Department --</option>
+         {% for department in departments %}
+            <option value="{{ department.Dep_Name }}">
+                {{ department.Dep_Name }}
+            </option>
+         {% endfor %}
+        </select>
+
+    </div>
+    <div class="entrypage">
+        <label for="Designation">Role</label>
+        <input type="text" id="Designation" name="Designation" required />
+    </div>
+    </div>
+    <div class="button-area">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset   </button>
+    </div>
+    </form>
+
+
+    
+
+</div>
+
+{% endblock %}

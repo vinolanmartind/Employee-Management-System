@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login.css') }}">
+
+    <title>Employee Login</title>
+</head>
+
+<body>
+
+    <form method="post" action="/login">
+
+        <div class="login-card">
+
+            <div class="logo-section">
+                <h2>Employee Login</h2>
+                
+            </div>
+
+            <div class="input-group">
+                <label>Employee No</label>
+                <input type="text" name="empno"placeholder="Enter Employee Number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="Password"placeholder="Enter Password" required>
+            </div>
+
+            {% if error %}
+            <div class="error-msg">
+                {{ error }}
+            </div>
+            {% endif %}
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

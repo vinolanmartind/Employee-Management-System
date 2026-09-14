@@ -1,0 +1,88 @@
+.edit-employee-container {
+width: 800px;
+max-width: 90%;
+margin: 40px auto;
+padding: 30px;
+background: #ffffff;
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.success-message {
+background-color: #d4edda;
+color: #155724;
+padding: 12px;
+margin-bottom: 15px;
+border-radius: 5px;
+text-align: center;
+}
+
+
+.edit-employee-container h1 {
+margin-bottom: 25px;
+text-align: center;
+font-size: 26px;
+color: #333;
+}
+.form-group {
+margin-bottom: 18px;
+}
+.form-group label {
+display: block;
+margin-bottom: 7px;
+font-size: 14px;
+font-weight: 600;
+color: #333;
+}
+.form-group input,
+.form-group select {
+width: 100%;
+padding: 11px 12px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+outline: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #555;
+}
+.form-group input[readonly] {
+background-color: #f3f3f3;
+color: #777;
+cursor: not-allowed;
+}
+.form-buttons {
+display: flex;
+gap: 12px;
+margin-top: 25px;
+}
+.form-buttons button {
+flex: 1;
+padding: 11px 18px;
+border: none;
+border-radius: 5px;
+background-color: #333;
+color: white;
+font-size: 14px;
+cursor: pointer;
+}
+
+.form-buttons button:hover {
+background-color: #555;
+}
+.form-buttons a {
+flex: 1;
+padding: 11px 18px;
+box-sizing: border-box;
+border-radius: 5px;
+background-color: #e5e5e5;
+color: #333;
+text-decoration: none;
+text-align: center;
+font-size: 14px;
+}
+.form-buttons a:hover {
+    background-color: #d5d5d5;
+}
